@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 130vh;
+        }
+        .form-container{
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 2);
+            text-align: center;
+        }
+        .form-group{
+            margin-bottom: 15px;
+        }
+        .form-group label{
+            font-weight: 200;
+            display: block;
+            margin-bottom: 3px;
+            text-align: left;
+            font-size: 20px;
+        }
+        .form-group input{
+            width: 90%;
+            padding: 5px;
+            border: 1px solid blueviolet;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+        .form-group button{
+            width: 40%;
+            padding: 5px;
+            background: rgb(130, 209, 235);
+            color: ghostwhite;
+            font-size: 16px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .form-group button:hover{
+            background: darkgray;
+        }
+    </style>
+</head>
+<body background="images (4).jpeg">
+    <div class="form-container">
+        <h1>Login Form</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="name" id="name" placeholder="Enter Your Name">
+            </div>
+
+            <div class="form-group">
+                <label for="father_name">Father's Name:</label>
+                <input type="father_name" id="father's name" placeholder="Enter your Father's Name">
+            </div>
+
+            <div class="form-group">
+                <label for="date-of-birth">Date Of Birth:</label>
+                <input type="date" id="date-of-birth">
+            </div>
+
+            <div class="form-group">
+                <label for="CNIC/ID Number">CNIC/ID Number:</label>
+                <input type="text" id="CNIC/ID Number" placeholder="42101-1234567-9">
+            </div>
+
+            <div class="form-group">
+                <label for="contact_number">Contact Number:</label>
+                <input type="number" id="contact_number" placeholder="0333-1243546">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="shaheer123@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="address" id="address" placeholder="12/19 sector 5-F New Karachi">
+            </div>
+
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <input type="text" id="qualification" placeholder="Enter Your Qualification">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+            </div>
+
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="signature" id="signature" placeholder="signature">
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

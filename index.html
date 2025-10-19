@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindNest - Ideas, Learning & Creativity</title>
+    <meta name="description" content="MindNest - a hub for ideas, learning resources, projects, and creative minds." />
+    <link rel="icon" href="data:;base64,iVBORw0Ggo="><!-- tiny placeholder favicon -->
+    <style>
+        :root{
+            --bg:#0f1724; --card:#0b1220; --accent:#6ee7b7; --muted:#94a3b8; --glass: rgba(255,255,255,0.03);
+            --maxw:1100px; font-family: Inter, system-ui, -apple-system, 'Segeo UI', Roboto,'Helvetica Neue', Arial;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:linear-gradient(180deg,#071028 0%, #081826 100%);color:#e6eef8;min-height:100vh;line-height:1.5}
+        .wrap{max-width:var(--maxw);margin:36px auto;padding:24px}
+
+        header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+        .brand{display:flex;gap:14px;align-items:center}
+        .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042;box-shadow:0 6px 18px rgba(6,12,24,0.6)}
+        h1{margin:0;font-size:20px}
+        nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+
+        .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:28px}
+        .card{background:var(--glass);padding:22px;border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+        .hero h2{margin:0 0 12px 0;font-size:34px}
+        .hero p{color:var(--muted);margin:0 0 18px}
+        .cta{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022;font-weight:600;text-decoration:none}
+
+        .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+        .feature{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+        feature h3{margin:0 0 8px;font-size:16px}
+        .muted{color:var(--muted)}
+
+        footer{margin-top:28px;color:var(--muted);text-align:center;padding:20px 10px}
+
+        from input, from textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+        .small{font-size: 13px}
+
+        @media (max-width:520px){
+            .hero{grid-template-columns:1fr}
+            .features{grid-template-columns:repeat(2,1fr)}
+            .resources{grid-template-columns:1fr}
+        }
+        @media (max-width:520px){.features{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <div class="logo">MN</div>
+                <div>
+                    <h1>MindNest</h1>
+                    <div class="small muted">Ideas . Learning . Projects</div>
+                </div>
+            </div>
+            <nav>
+                <a herf="#features">Features</a>
+                <a herf="#resources">Resources</a>
+                <a herf="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero card">
+            <div>
+                <h2>Welcome to MindNest - a home for curious minds</h2>
+                <p class="muted">Collect ideas, learn new skills, publish short guides and host your projects builts to be simple,fast and focused on creativity.</p>
+                <a class="cta" herf="#resources">Explore Resources</a>
+                <div style="height:16px"></div>
+                <div class="small muted">Powered by a lightweight HTML template - ready to customize.</div>
+            </div>
+        </section>
+        
+        <section id="features" class="features">
+            <div class="feature card">
+                <h3> Curated Learning Paths</h3>
+                <div class="muted">Step-by-step guides and project-based lessons for fast skill growth.</div>
+            </div>
+            <div class="feature card">
+                <h3>Project Showcases</h3>
+                <div class="muted">Show off your work with live demos, screenshots and code snippets.</div>
+            </div>
+            <div class="feature card">
+                <h3>Idea Repository</h3>
+                <div class="muted">Save and organize your ideas, notes, and quick drafts.</div>
+            </div>
+        </section>
+
+        <section id="resources" class="resources">
+            <div>
+                <h3 style="margin-top:0">Latest Resources</h3>
+                <div class="list">
+                    <article class="item">
+                        <h4 style="margin:0 0 6px">Beginner's Guide to HTML</h4>
+                        <div class="muted small">A short hands-on guide to build your first webpage.</div>
+                    </article>
+                    <article class="item">
+                        <h4 style="margin:0 0 6px">Project: Notes App</h4>
+                        <div class="muted small">A lightweight notes app to organize ideas and collections.</div>
+                    </article>
+                    <article class="item">
+                        <h4 style="margin:0 0 6px">How to learn Faster</h4>
+                        <div class="muted small">Evidence-based tips for deliberate pratice and retention.</div>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="card">
+                <h4 style="margin-top:0">Join the Nest</h4>
+                <p class="muted small">Subscribe for short lessons and project updates.</p>
+                <form id="subscribe" onsubmit="return handleSubscribe(event)">
+                    <input type="email" id="email" placeholder="Your email" required />
+                    <div style="height:10px"></div>
+                    <button type="submit" class="cta" style="display:block;width:100%">Subscribe</button>
+                </form>
+                <div style="height:14px"></div>
+                <div class="small muted">Or <a herf="#contact" style="color:var(--accent);text-decoration:none">contact us</a> for collaborations.</div>
+            </aside>
+        </section>
+
+        <section id="contact" style="margin-top:22px">
+            <div class="card">
+                <h3 style="margin-top:0">Get in touch</h3>
+                <form onsubmit="return handleContact(event)">
+                    <input type="text" id="name" placeholder="Your name" required />
+                    <div style="height:10px"></div>
+                    <input type="email" id="mail" placeholder="Email" required />
+                    <div style="height:10px"></div>
+                    <textarea id="msg" rows="4" placeholder="Message" required></textarea>
+                    <div style="height:10px"></div>
+                    <button class="cta" type="submit">Send message</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div>© <span id="year"></span>MindNest - Build, learn, share.</div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        function handleSubscribe(e){
+            e.preventDefault();
+            var email = document.getElementById('email').value;
+            alert('Thanks - ' + email + ' has been added to the list (demo).');
+            e.target.reset();
+            return false;
+        }
+        function handleContact(e){
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            alert('Thanks, ' + name + '! Message recived (demo).');
+            e.target.reset();
+            return false;
+        }
+    </script>
+</body>
+</html>

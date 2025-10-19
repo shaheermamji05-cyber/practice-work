@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 23px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .box{
+            height: 380px;
+            width: 350px;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 4%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img{
+            width: 350px;
+            height: 200px;
+            border-radius: 4% 4% 0 0;
+            object-fit: cover;
+        }
+        button{
+            width: 130px;
+            height: 30px;
+            border-radius: 6px;
+            border: 1px solid black;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bolder;
+            background-color: #007bff;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        h2, p{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901782.jpg">
+            <h2>Introduction to HTML & CSS</h2>
+            <P>Instructor: Sarah Barkat Ali</P>
+            <p>HTML structures the content of a webpage, while CSS styles and visually designs that content.</p>
+            <button type="button">Enroll Now</button>
+        </div>
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUugYNsb66TpbEa8F80rGdlMeWsdBt4HYJlw&s">
+            <h2>Introduction to JavaScript</h2>
+            <p>Instructor: Sarah Barkat Ali</p>
+            <p>JavaScript adds interactivity and dynamic behavior to websites by manipulating HTML and CSS.</p>
+            <button type="button">Enroll Now</button>
+        </div>
+    </div>
+</body>
+</html>

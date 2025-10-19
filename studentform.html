@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body background="https://cdn.pixabay.com/photo/2018/04/09/14/33/abstract-3304213_1280.png">
+    <div class="form-container">
+        <form action="">
+            <h1>Admission Form</h1>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required min="5" max="10">
+            </p>
+            <p>
+                <label for="father's name">Father Name:</label>
+                <input type="text" id="father name" name="father name" placeholder="Enter Your Father Name" required min="5" max="10">
+            </p>
+            <p>
+                <label for="date of birth">DOB</label>
+                <input type="date" name="date" id="date">
+            </p>
+            <p>
+                <label for="Gender">Gender:</label>
+                <select name="Gender" id="gender">
+                    <option value="select">--Select--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email">
+            </p>
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input type="phone" id="phone" name="phone" placeholder="11-digit number">
+            </p>
+            <p>
+                <label for="address">Address:</label>
+                <textarea name="address" id="address" cols="20" rows="3"></textarea>
+            </p>
+            <p>
+                <label for="course applied for">Course Applied For:</label>
+                <select name="Course" id="course">
+                    <option value="select">--Select Cource--</option>
+                    <option value="digital marketing">Digital Marketing</option>
+                    <option value="artifical intelligence">Artifical intelligence</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="e-commerce">E-commerce</option>
+                </select>
+            </p>
+            <button type="submit admission form">Submit Form</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
